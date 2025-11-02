@@ -25,6 +25,7 @@ import {
   abstract,
   abstractTestnet,
   story,
+  riseTestnet,
 } from "viem/chains";
 import { privateKeyToAccount } from "viem/accounts";
 import { Hex } from "viem";
@@ -229,6 +230,8 @@ export function getChainFromNetwork(network: string | undefined): Chain {
       return iotex;
     case "iotex-testnet":
       return iotexTestnet;
+    case "rise-testnet":
+      return riseTestnet;
     default:
       throw new Error(`Unsupported network: ${network}`);
   }
